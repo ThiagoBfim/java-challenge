@@ -2,7 +2,7 @@
 
 This is a simple project with a challenge for Backend developrs.
 
-### In this project you will learn:
+## In this project you will learn:
 
 * Consuming API (Feign)
 * Creating API REST (Spring Web)
@@ -17,44 +17,47 @@ This is a simple project with a challenge for Backend developrs.
 * Kubernetes
 * Deploy in Cloud
 
-### Tasks: 
+## Tasks: 
 
+### Create your API REST
 
-Consume the IMDB API (https://imdb-api.com/) and create these features:
 
 - [ ] Create the authentication using JWT
 - [ ] Create two roles ADMIN, USER
 - [ ] Create an endpoint to return the JWT (5 minutes of timeout), receive the username and password
-- [ ] Create an endpoint to consume an API from IMDB and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
-- [ ] Create an endpoint to create a user, this user will have just a USER role. (The user should have a username and a password)
+- [ ] Create an endpoint to consume an API from IMDB (https://imdb-api.com/) and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+- [ ] Create an endpoint to create a user, this user will have just a USER role. (The user should have a username and a password, be careful when saving the user password)
 - [ ] Create an endpoint to update the permission to this user to ADMIN and/or USER role. This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+
+### Upgrade your API REST
+
 - [ ] Create an endpoint to list all the movies.
 - [ ] Create an endpoint to include a movie to the user (favorite list)
 - [ ] Create an endpoint to exclude the movie from the favorite list
 - [ ] Each time the user includes the movie in the favorite list add one "star" to the movie
-- [ ] Create an endpoint to list the top 10 movies, and the movies with more stars.
+- [ ] Create an endpoint to list the top 10 movies, the movies with more stars.
 - [ ] Create an endpoint to list the favorite movies per user.
-- [ ]  Don't forget to include Swagger, and the test.
+- [ ] Don't forget to include Swagger, and the test.
 
 
 ----------
 
-Challenges LVL 1:
+### Challenges LVL 1:
 
 - [ ] Include this rank top movies in the cache (Hazelcast), and get from it using RateLimiter (https://resilience4j.readme.io/docs/ratelimiter) as failover. 
-- [ ]  Publish your project in the Cloud with Heroku.
+- [ ]  Publish your project in the Cloud with Heroku (or another PaaS).
 - [ ]  Find other API to get Movies, and update the first endpoint to use template method design pattern to be able to get the movies from bove APIs. Use a CircuitBreak for that. If you have any problem with one API you should get from the other API as a failover. (You can try that changing the API Key)
 
 
 ----------
 
-Challenges LVL 2:
-
+### Challenges LVL 2:
 
 - [ ] Run your application using Docker, create a docker file.
 - [ ] Include Spring Actuator.
 - [ ] Create the files to deploy the application using kubernetes.
 - [ ] Include the probes from actuator in your deployment.yml
+- [ ] Update your probes in case of hazelcast go down the application should restart
 - [ ] Do the deployment into sandbox Openshift (https://developers.redhat.com/developer-sandbox)
 
 
