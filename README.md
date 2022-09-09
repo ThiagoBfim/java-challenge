@@ -60,6 +60,8 @@ This is a simple project with a challenge for Backend developrs.
 - [ ] Update your probes in case of hazelcast go down the application should restart
 - [ ] Do the deployment into sandbox Openshift (https://developers.redhat.com/developer-sandbox)
 
+----------
+
 ### Challenges LVL 3:
 
 - [ ] Include SonarCloud in your project, make sure the coverage is above 70% and you don't have a loud code smell.
