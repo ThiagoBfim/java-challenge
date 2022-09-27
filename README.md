@@ -17,63 +17,93 @@ This is a simple project with a challenge for Backend developrs.
 * Kubernetes
 * Deploy in Cloud
 
-## Tasks: 
+## Tasks:
 
-### Create your API REST
+### LVL 1 
 
+**Goals:** 
+* Create the project
+* Create the database using H2
+* Create the user entity, and Roles
+* Include JWT authentication
+* Create the login/registration/upgrade-permissions endpoints
 
-- [ ] Create the authentication using JWT
-- [ ] Create two roles ADMIN, USER
-- [ ] Create an endpoint to return the JWT (5 minutes of timeout), receive the username and password
-- [ ] Create an endpoint to consume an API from IMDB (https://imdb-api.com/) and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
-- [ ] Create an endpoint to create a user, this user will have just a USER role. (The user should have a username and a password, be careful when saving the user password)
-- [ ] Create an endpoint to update the permission to this user to ADMIN and/or USER role. This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+**Expected time:** 16 | 8 | 4 hours
 
-### Upgrade your API REST
+#### Create your project
 
-- [ ] Create an endpoint to list all the movies.
-- [ ] Create an endpoint to include a movie to the user (favorite list)
-- [ ] Create an endpoint to exclude the movie from the favorite list
-- [ ] Each time the user includes the movie in the favorite list add one "star" to the movie
-- [ ] Create an endpoint to list the top 10 movies, the movies with more stars.
-- [ ] Create an endpoint to list the favorite movies per user.
-- [ ] Don't forget to include Swagger/OpenAPI, and the test.
+- [x] Create the database using [H2](https://www.h2database.com/html/main.html). You should include the user table, the user can have multiple roles.
+- [x] Create an endpoint to create a user. (The user should have a username and a password, be careful when saving the user password, and the roles)
+- [x] Create an endpoint to update the permission to this user to ADMIN and/or USER role. This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
 
-#### Content to help:
+#### Create the authentication for your API
+
+- [X] Create the authentication using JWT
+- [X] Create two roles ADMIN, USER
+- [X] Create an endpoint to return the JWT (5 minutes of timeout), receive the username and password
 
 * Book: REST API - Design Rulebook : Mark Masse: https://www.oreilly.com/library/view/rest-api-design/9781449317904/
 * Spring Data: https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa
 * Spring REST - Full Tutorial: https://www.baeldung.com/rest-with-spring-series
 * Spring REST: https://spring.io/guides/tutorials/rest/
+* Spring Security: https://www.toptal.com/spring/spring-security-tutorial
+* Spring Security JWT: https://www.bezkoder.com/spring-boot-jwt-authentication/
+
+### LVL 2
+
+**Expected time:** 16 | 9 | 5 hours
+
+#### Upgrade your API REST
+
+- [x] Create an endpoint to consume an API from IMDB (https://imdb-api.com/) and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+- [x] Create an endpoint to list all the movies.
+- [x] Create an endpoint to include a movie to the user (favorite list)
+- [x] Create an endpoint to exclude the movie from the favorite list
+- [x] Each time the user includes the movie in the favorite list add one "star" to the movie
+- [x] Create an endpoint to list the top 10 movies, the movies with more stars.
+- [x] Create an endpoint to list the favorite movies per user.
+- [x] Don't forget to include Swagger/OpenAPI, and the test.
+
+#### Content to help:
+
+* Spring Test: https://www.baeldung.com/integration-testing-in-spring
 * Open API: https://www.baeldung.com/spring-rest-openapi-documentation
 * WebClient: https://www.baeldung.com/spring-5-webclient
 * Feign: https://www.baeldung.com/intro-to-feign
 
-
-
 ----------
 
-### Challenges LVL 1:
+### LVL 3
 
-- [ ] Include this rank top movies in the cache (Hazelcast), and get from it using RateLimiter (https://resilience4j.readme.io/docs/ratelimiter) as failover. 
-- [ ] Publish your project in the Cloud with Heroku (or another PaaS).
-- [ ] Find other API to get Movies, and update the first endpoint to use template method design pattern to be able to get the movies from bove APIs. Use a CircuitBreak for that. If you have any problem with one API you should get from the other API as a failover. (You can try that changing the API Key)
+**Expected time:** 18 | 11 | 7 hours
+
+#### Include Hazelcast, design pattern, Resilience4J
+
+- [x] Include this rank top movies in the cache (Hazelcast), and get from it using RateLimiter (https://resilience4j.readme.io/docs/ratelimiter) as fallback.
+- [x] Find other API to get Movies, and update the first endpoint to use template method design pattern to be able to get the movies from bove APIs. Use a CircuitBreak for that. If you have any problem with one API you should get from the other API as a fallback. (You can try that changing the API Key)
+- [x] Create a new endpoint to send a random movie to the user.
+This endpoint should do this: find another user who likes the same movies as the current user and upload a random movie from that favorites list.
+If this condition does not exist, just send a random movie.
 
 #### Content to help:
 
 * Guide to Resilience4j: https://www.baeldung.com/resilience4j
+* RateLimiter: https://resilience4j.readme.io/docs/ratelimiter
 * Caching with Spring Boot and Hazelcast: https://hazelcast.com/blog/spring-boot/
+* Get Started with Hazelcast using Spring Boot: https://docs.hazelcast.com/tutorials/hazelcast-embedded-springboot
 * Template Method: https://refactoring.guru/design-patterns/template-method
 * Failover: https://medium.com/lydtech-consulting/failover-and-circuit-breaker-with-resilience4j-14a57a43c0da
 
 ----------
 
-### Challenges LVL 2:
+### LVL 4
 
-- [ ] Run your application using Docker, create a docker file.
-- [ ] Include Spring Actuator.
-- [ ] Create the files to deploy the application using kubernetes.
-- [ ] Include the probes from actuator in your deployment.yml
+#### Docker, Kubernetes, Deploy in the cloud
+
+- [x] Run your application using Docker, create a docker file.
+- [x] Include Spring Actuator.
+- [x] Create the files to deploy the application using kubernetes (2 replicas).
+- [x] Include the probes from actuator in your deployment.yml
 - [ ] Update your probes in case of hazelcast go down the application should restart
 - [ ] Do the deployment into sandbox Openshift (https://developers.redhat.com/developer-sandbox)
 
@@ -87,7 +117,9 @@ This is a simple project with a challenge for Backend developrs.
 
 ----------
 
-### Challenges LVL 3:
+### LVL 5
+
+#### Pipeline, CI/CD, Sonar
 
 - [ ] Include SonarCloud in your project, make sure the coverage is above 70% and you don't have a loud code smell.
 - [ ] Include a pipeline, you can use gitHub Actions, or Travis CI, use what you prefer.
@@ -101,3 +133,7 @@ This is a simple project with a challenge for Backend developrs.
 * The twelve-factor: https://12factor.net/
 * Travis CI: https://www.travis-ci.org/
 
+
+### Feedback
+
+Form: https://forms.gle/QuMzjiutzxk5sVTQA
