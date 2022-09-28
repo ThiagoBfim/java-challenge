@@ -32,15 +32,15 @@ This is a simple project with a challenge for Backend developrs.
 
 #### Create your project
 
-- [x] Create the database using [H2](https://www.h2database.com/html/main.html). You should include the user table, the user can have multiple roles.
-- [x] Create an endpoint to create a user. (The user should have a username and a password, be careful when saving the user password, and the roles)
-- [x] Create an endpoint to update the permission to this user to ADMIN and/or USER role. This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+- [ ] Create the database using [H2](https://www.h2database.com/html/main.html). You should include the user table, the user can have multiple roles.
+- [ ] Create an endpoint to create a user. (The user should have a username and a password, be careful when saving the user password, and the roles)
+- [ ] Create an endpoint to update the permission to this user to ADMIN and/or USER role. This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
 
 #### Create the authentication for your API
 
-- [X] Create the authentication using JWT
-- [X] Create two roles ADMIN, USER
-- [X] Create an endpoint to return the JWT (5 minutes of timeout), receive the username and password
+- [ ] Create the authentication using JWT
+- [ ] Create two roles ADMIN, USER
+- [ ] Create an endpoint to return the JWT (5 minutes of timeout), receive the username and password
 
 * Book: REST API - Design Rulebook : Mark Masse: https://www.oreilly.com/library/view/rest-api-design/9781449317904/
 * Spring Data: https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa
@@ -55,14 +55,14 @@ This is a simple project with a challenge for Backend developrs.
 
 #### Upgrade your API REST
 
-- [x] Create an endpoint to consume an API from IMDB (https://imdb-api.com/) and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
-- [x] Create an endpoint to list all the movies.
-- [x] Create an endpoint to include a movie to the user (favorite list)
-- [x] Create an endpoint to exclude the movie from the favorite list
-- [x] Each time the user includes the movie in the favorite list add one "star" to the movie
-- [x] Create an endpoint to list the top 10 movies, the movies with more stars.
-- [x] Create an endpoint to list the favorite movies per user.
-- [x] Don't forget to include Swagger/OpenAPI, and the test.
+- [ ] Create an endpoint to consume an API from IMDB (https://imdb-api.com/) and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+- [ ] Create an endpoint to list all the movies.
+- [ ] Create an endpoint to include a movie to the user (favorite list)
+- [ ] Create an endpoint to exclude the movie from the favorite list
+- [ ] Each time the user includes the movie in the favorite list add one "star" to the movie
+- [ ] Create an endpoint to list the top 10 movies, the movies with more stars.
+- [ ] Create an endpoint to list the favorite movies per user.
+- [ ] Don't forget to include Swagger/OpenAPI, and the test.
 
 #### Content to help:
 
@@ -79,9 +79,9 @@ This is a simple project with a challenge for Backend developrs.
 
 #### Include Hazelcast, design pattern, Resilience4J
 
-- [x] Include this rank top movies in the cache (Hazelcast), and get from it using RateLimiter (https://resilience4j.readme.io/docs/ratelimiter) as fallback.
-- [x] Find other API to get Movies, and update the first endpoint to use template method design pattern to be able to get the movies from bove APIs. Use a CircuitBreak for that. If you have any problem with one API you should get from the other API as a fallback. (You can try that changing the API Key)
-- [x] Create a new endpoint to send a random movie to the user.
+- [ ] Include this rank top movies in the cache (Hazelcast), and get from it using RateLimiter (https://resilience4j.readme.io/docs/ratelimiter) as fallback.
+- [ ] Find other API to get Movies, and update the first endpoint to use template method design pattern to be able to get the movies from bove APIs. Use a CircuitBreak for that. If you have any problem with one API you should get from the other API as a fallback. (You can try that changing the API Key)
+- [ ] Create a new endpoint to send a random movie to the user.
 This endpoint should do this: find another user who likes the same movies as the current user and upload a random movie from that favorites list.
 If this condition does not exist, just send a random movie.
 
@@ -100,10 +100,10 @@ If this condition does not exist, just send a random movie.
 
 #### Docker, Kubernetes, Deploy in the cloud
 
-- [x] Run your application using Docker, create a docker file.
-- [x] Include Spring Actuator.
-- [x] Create the files to deploy the application using kubernetes (2 replicas).
-- [x] Include the probes from actuator in your deployment.yml
+- [ ] Run your application using Docker, create a docker file.
+- [ ] Include Spring Actuator.
+- [ ] Create the files to deploy the application using kubernetes (2 replicas).
+- [ ] Include the probes from actuator in your deployment.yml
 - [ ] Update your probes in case of hazelcast go down the application should restart
 - [ ] Do the deployment into sandbox Openshift (https://developers.redhat.com/developer-sandbox)
 
@@ -134,6 +134,3 @@ If this condition does not exist, just send a random movie.
 * Travis CI: https://www.travis-ci.org/
 
 
-### Feedback
-
-Form: https://forms.gle/QuMzjiutzxk5sVTQA
