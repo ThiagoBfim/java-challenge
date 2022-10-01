@@ -98,21 +98,34 @@ If this condition does not exist, just send a random movie.
 
 ### LVL 4
 
-#### Docker, Kubernetes, Deploy in the cloud
+**Expected time:** 21 | 14 | 8 hours
+
+#### Part 1 - Docker, Kubernetes
 
 - [ ] Run your application using Docker, create a docker file.
-- [ ] Include Spring Actuator.
-- [ ] Create the files to deploy the application using kubernetes (2 replicas).
-- [ ] Include the probes from actuator in your deployment.yml
-- [ ] Update your probes in case of hazelcast go down the application should restart
+- [ ] Create the files to deploy the application using kubernetes.
+- [ ] Include the probes from actuator in your deployment.yaml
+- [ ] Deploy your application in local environment using Kubernetes.
+
+
+**Expected time:** 27 | 17 | 7 hours
+
+#### Part 2 - Deploy in the cloud, Openshift
+
+- [ ] Include postgres to your production environment
+- [ ] Include all the yaml files that are required to deploy the hazelcast and postgres
 - [ ] Do the deployment into sandbox Openshift (https://developers.redhat.com/developer-sandbox)
+- [ ] Create a service and a route for your application to expose your application to internet.
+- [ ] Create a document with step-by-step on how to deploy the application in the Openshift
+
 
 #### Content to help:
 
 * Spring Boot Actuator: https://www.baeldung.com/spring-boot-actuators
 * Spring Boot with Docker: https://spring.io/guides/gs/spring-boot-docker/
-* Template Method: https://refactoring.guru/design-patterns/template-method
+* Hazelcast Config: https://docs.hazelcast.com/imdg/4.2/configuration/configuring-declaratively
 * Kubernetes Tutorial: https://medium.com/@javatechie/kubernetes-tutorial-run-deploy-spring-boot-application-in-k8s-cluster-using-yaml-configuration-3b079154d232
+* Postgres K8s: https://www.sumologic.com/blog/kubernetes-deploy-postgres/
 * Book: Modernizing Enterprise Java: https://developers.redhat.com/e-books/modernizing-enterprise-java
 
 ----------
@@ -124,7 +137,7 @@ If this condition does not exist, just send a random movie.
 - [ ] Include SonarCloud in your project, make sure the coverage is above 70% and you don't have a loud code smell.
 - [ ] Include a pipeline, you can use gitHub Actions, or Travis CI, use what you prefer.
 - [ ] Your CI pipeline should include [build, test, sonar]
-- [ ] Include also CD in your pipeline, it should be able to deploy in your PaaS (Heroku) or in your Openshift.
+- [ ] Include also CD in your pipeline, it should be able to deploy in the Cloud.
 
 #### Content to help:
 
@@ -132,5 +145,6 @@ If this condition does not exist, just send a random movie.
 * How to build a CI/CD pipeline with GitHub Actions in four simple steps: https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/
 * The twelve-factor: https://12factor.net/
 * Travis CI: https://www.travis-ci.org/
+
 
 
