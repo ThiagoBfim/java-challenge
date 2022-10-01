@@ -1,14 +1,16 @@
 # Challenge with Java BE
 
-This is a simple project with a challenge for Backend developrs.
+This is a simple project with a challenge for Backend developers.
 
 ## In this project you will learn:
 
 * Consuming API (Feign)
 * Creating API REST (Spring Web)
 * Create a database (Spring Data)
-* Create a CircuitBreak (Resilience4J)
-* Different Roles (Spring Security)
+* Create a CircuitBreak & RateLimiter (Resilience4J)
+* Different Roles & JWT (Spring Security)
+* JUnit, Mockito, MockMvc
+* H2/Postgres
 * Cache with Hazelcast
 * Swagger
 * Sonar
