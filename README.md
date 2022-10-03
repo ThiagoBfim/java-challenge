@@ -137,8 +137,7 @@ If this condition does not exist, just send a random movie.
 #### Pipeline, CI/CD, Sonar
 
 - [ ] Include SonarCloud in your project, make sure the coverage is above 70% and you don't have a loud code smell.
-- [ ] Include a pipeline, you can use gitHub Actions, or Travis CI, use what you prefer.
-- [ ] Your CI pipeline should include [build, test, sonar]
+- [ ] Include a pipeline, you can use gitHub Actions, or Travis CI, use what you prefer. Your CI pipeline should include [build, test, sonar]
 - [ ] Include also CD in your pipeline, it should be able to deploy in the Cloud.
 
 #### Content to help:
