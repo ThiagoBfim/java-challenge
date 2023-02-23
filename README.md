@@ -96,6 +96,7 @@ If this condition does not exist, just send a random movie.
 * Get Started with Hazelcast using Spring Boot: https://docs.hazelcast.com/tutorials/hazelcast-embedded-springboot
 * Template Method: https://refactoring.guru/design-patterns/template-method
 * Failover: https://medium.com/lydtech-consulting/failover-and-circuit-breaker-with-resilience4j-14a57a43c0da
+* Cloud Design Patterns Book – https://www.microsoft.com/en-us/download/details.aspx?id=42026
 
 ----------
 
