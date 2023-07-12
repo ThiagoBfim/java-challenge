@@ -35,17 +35,18 @@ This is a simple project with a challenge for Backend developers.
 #### Create your project
 
 - [ ] Create the database using [H2](https://www.h2database.com/html/main.html). You should include the user table, the user can have multiple roles.
-- [ ] Create an endpoint to create a user. (The user should have a username and a password, be careful when saving the user password, and the roles)
-- [ ] Create an endpoint to update the permission to this user to ADMIN and/or USER role. This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+- [ ] Create two roles ADMIN, USER
+- [ ] Create an endpoint to create a user (register). The user should have a username and a password, be careful when saving the user password, and the roles.
 
 #### Create the authentication for your API
 
-- [ ] Create the authentication using JWT
-- [ ] Create two roles ADMIN, USER
 - [ ] Create an endpoint to return the JWT (5 minutes of timeout), receive the username and password
+- [ ] Create the authentication using JWT
+- [ ] Create an endpoint to update the permission to this user to ADMIN and/or USER role. This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
 
 * Book: REST API - Design Rulebook : Mark Masse: https://www.oreilly.com/library/view/rest-api-design/9781449317904/
 * Spring Data: https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa
+* Spring Boot H2: https://www.baeldung.com/spring-boot-h2-database
 * Spring REST - Full Tutorial: https://www.baeldung.com/rest-with-spring-series
 * Spring REST: https://spring.io/guides/tutorials/rest/
 * Spring Security: https://www.toptal.com/spring/spring-security-tutorial
@@ -57,7 +58,7 @@ This is a simple project with a challenge for Backend developers.
 
 #### Upgrade your API REST
 
-- [ ] Create an endpoint to consume an API from IMDB (https://imdb-api.com/) and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
+- [ ] Create an endpoint to consume an API from TBMD to retrieve all the movies [([https://imdb-api.com/](https://developer.marvel.com/)) ](https://developer.themoviedb.org/)and populate your database (you can use WebClient or Feign to consume the API). This API could be called just by the ADMIN user, see @Secured and Roles in Spring Security.
 - [ ] Create an endpoint to list all the movies.
 - [ ] Create an endpoint to include a movie to the user (favorite list)
 - [ ] Create an endpoint to exclude the movie from the favorite list
@@ -69,6 +70,8 @@ This is a simple project with a challenge for Backend developers.
 #### Content to help:
 
 * Spring Test: https://www.baeldung.com/integration-testing-in-spring
+* Error Handling for REST: https://www.baeldung.com/exception-handling-for-rest-with-spring
+* Bean Validation: https://www.baeldung.com/javax-validation
 * Open API: https://www.baeldung.com/spring-rest-openapi-documentation
 * WebClient: https://www.baeldung.com/spring-5-webclient
 * Feign: https://www.baeldung.com/intro-to-feign
