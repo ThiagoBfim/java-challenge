@@ -92,8 +92,7 @@ If this condition does not exist, just send a random movie.
 
 #### Content to help:
 
-* Guide to Resilience4j: https://www.baeldung.com/resilience4j
-* Spring Boot with Resilience4j: https://www.baeldung.com/spring-boot-resilience4j
+* Spring Cloud Circuit Breaker: https://docs.spring.io/spring-cloud-circuitbreaker/docs/current/reference/html/#auto-configuration
 * RateLimiter: https://resilience4j.readme.io/docs/ratelimiter
 * Caching with Spring Boot and Hazelcast: https://hazelcast.com/blog/spring-boot/
 * Get Started with Hazelcast using Spring Boot: https://docs.hazelcast.com/tutorials/hazelcast-embedded-springboot
